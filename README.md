@@ -6,3 +6,4 @@
 - [從異世界歸來發現只剩自己不會 Kubernetes 系列](https://ithelp.ithome.com.tw/users/20149562/ironman/5366)
 - [從題目中學習 k8s 系列](https://ithelp.ithome.com.tw/users/20129600/ironman/3179)
 - [Kubernetes for the Absolute Beginners - Hands-on](https://www.udemy.com/course/learn-kubernetes/)
+- [150 Questions for CKAD Exams](https://medium.com/bb-tutorials-and-thoughts/practice-enough-with-these-questions-for-the-ckad-exam-2f42d1228552)
