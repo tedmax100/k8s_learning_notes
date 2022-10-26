@@ -8,3 +8,4 @@
 - [Kubernetes for the Absolute Beginners - Hands-on](https://www.udemy.com/course/learn-kubernetes/)
 - [150 Questions for CKAD Exams](https://medium.com/bb-tutorials-and-thoughts/practice-enough-with-these-questions-for-the-ckad-exam-2f42d1228552)
 - [EveryThing You Need to Know About the CKA and CKAD](https://www.youtube.com/watch?v=WFGPArjYMbQ)
+- [Docker Compose And Kubernetes Fundamental](https://www.youtube.com/watch?v=kTp5xUtcalw)
