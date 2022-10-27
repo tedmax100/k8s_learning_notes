@@ -19,10 +19,50 @@
 
 ## Cloud-native
 ### Cloud-native v.s. Cloud-based v.s. Cloud-enabled
-#### CLoud-enabled
+一堆名詞, 巴拉巴巴巴[^2]
+#### Cloud-enabled
 就把地端的Monolithic application, 原封不動的搬到雲上, 租用個VM, 好一點的連資料庫也搬到雲上, 架構保持不變.
 
-通常這是把老系統慢慢上雲最先進行的第一步.
+通常這是把老系統慢慢上雲, 最先進行的第一步.
+
+#### Cloud-based
+雲平台提供的功能, 或者是把我們開發的應用, 給雲做託管.
+
+像把應用程式佈署到AWS Lambda, GCP Cloudrun
+但可能資料庫還是在地端的機房內, 通常資料要保留在本地地端, 是為了一些合規性安全性的考量.
+
+
+### Cloud-native
+Cloud-native用來表示已經包裝好容器的(containerize)應用、服務等.
+換句話說, 直接就能透過CI/CD, 來佈署在各種類型的雲上, 成為一個新的服務.[^3]
+
+一個cloud-native應用通常能夠
+- 按需擴縮容
+- 自我自治,修復
+- 支持零停機時間滾動更新
+- 可以在任何有Kubernetes的地方運行
+
+按需擴縮容是指應用程式與相關的基礎建設能按照需求自動擴容與縮容的能力.
+K8S有這樣的能力, 能在需求增加時自動對應應用程式與基礎建設進行擴容, 
+並在需求下降時自動縮容.
+
+自我自治,修復; 我們在佈署到K8S時, 需要告訴K8S該應用長怎樣?
+幾個實例, 連接到哪些網路都宣告清楚了! 
+K8S會把這些保存為期望狀態(desired state)[^4], 並監視著, 確保它始終跟期望狀態匹配.
+只要有實例 巴比Q了, K8S就會知道並啟動一個副本來替代它, 這就是自我修復.
+
+零停機時間滾動更新(Zero downtime deployment)講的是可以逐步更新新版本的應用上去, 而不用把正在服務的節點進行關閉. 
+這樣客戶端都不會注意到, 系統整體依然保持著可用的狀態.
+要是公司有簽約, 一年可用性的SLA需要達到99.99%好了.
+表示一年中要有99.99%時間正常營運
+> (60s * 60m * 24hr * 365d) * 99.99% = 31532846.4s
+> 換言之, 無法提供服務的時間只有(60s * 60m * 24hr * 365d) * 0.01% = 3153.6s = 52分鐘33.6秒
+
+要是您的服務跟基礎建設能達到零停機時間滾動更新, 這樣這52分鐘就不會浪費在版本更新上了.
+
+
+可以在任何有Kubernetes的地方運行這特點就廢話了.
+K8S能在各種雲上, 也能在本地, 甚至在樹莓派叢集上[^6].
 
 ## Orchestrator
 ## K8S Architecture
@@ -30,4 +70,8 @@
 
 ## References
 [^1]: [Two Pizza Team Rule](https://docs.aws.amazon.com/whitepapers/latest/introduction-devops-aws/two-pizza-teams.html)  
-[^2]: [Cloud-Based, Cloud-Native, and Cloud-Enabled Applications—What’s the Difference?](https://www.papertrail.com/solution/tips/cloud-based-cloud-native-and-cloud-enabled-applications-whats-the-difference/)
+[^2]: [Cloud-Based, Cloud-Native, and Cloud-Enabled Applications—What’s the Difference?](https://www.papertrail.com/solution/tips/cloud-based-cloud-native-and-cloud-enabled-applications-whats-the-difference/)  
+[^3]: [CNCF Cloud-Native DEfinition](https://github.com/cncf/toc/blob/main/DEFINITION.md)
+[^4]: [Understanding Kubernetes Objects](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/)
+[^5]: [Performing a Rolling Update](https://kubernetes.io/docs/tutorials/kubernetes-basics/update/update-intro/)
+[^6]: [Creating a Raspberry Pi cluster running Kubernetes](https://kubernetes.io/blog/2015/11/creating-a-raspberry-pi-cluster-running-kubernetes-the-shopping-list-part-1/)
