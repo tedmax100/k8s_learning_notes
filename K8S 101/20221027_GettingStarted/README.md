@@ -55,7 +55,7 @@ K8S會把這些保存為期望狀態(desired state)[^4], 並監視著, 確保它
 這樣客戶端都不會注意到, 系統整體依然保持著可用的狀態.
 要是公司有簽約, 一年可用性的SLA需要達到99.99%好了.
 表示一年中要有99.99%時間正常營運
-> (60s * 60m * 24hr * 365d) * 99.99% = 31532846.4s
+> (60s * 60m * 24hr * 365d) * 99.99% = 31532846.4s  
 > 換言之, 無法提供服務的時間只有(60s * 60m * 24hr * 365d) * 0.01% = 3153.6s = 52分鐘33.6秒
 
 要是您的服務跟基礎建設能達到零停機時間滾動更新, 這樣這52分鐘就不會浪費在版本更新上了.
@@ -65,6 +65,23 @@ K8S會把這些保存為期望狀態(desired state)[^4], 並監視著, 確保它
 K8S能在各種雲上, 也能在本地, 甚至在樹莓派叢集上[^6].
 
 ## Orchestrator
+![](orchestrator.jpeg)
+上面講了一些特性, 如果沒有個編排器(Orchestrator), 都要自幹, 是很容易出錯的.
+最後管理上就一團糟, 這也是為什麼微服務架構剛起來時, 很多人照做之後, 但管理跟佈署上碰到很多的麻煩.
+
+Cloud-native的應用就很像是一個管弦樂團
+![](orchestrator_02.jpg)
+編排器就像個指揮, 指揮著一切, 告訴每組樂器什麼時候演奏, 怎樣的速度演奏.
+
+K8S就是這邊排器指揮的角色, 把一組微服務相關的應用聚集在一起, 並且組織起來成一個能創造價值的應用.
+包含前面提到的擴縮容、自我修復、滾動更新都是由它負責指揮.
+![](microservice+orchestrator.png)
+
+從K8S的Icon來看, 是個輪舵.
+Kubernetes在希臘雨中的意思是舵手, 掌握舵的人.[^7]
+
+K8s是我們常用的縮寫, 這個```8```表示的是K與s之間有8個字母.
+
 ## K8S Architecture
 
 
@@ -75,3 +92,4 @@ K8S能在各種雲上, 也能在本地, 甚至在樹莓派叢集上[^6].
 [^4]: [Understanding Kubernetes Objects](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/)
 [^5]: [Performing a Rolling Update](https://kubernetes.io/docs/tutorials/kubernetes-basics/update/update-intro/)
 [^6]: [Creating a Raspberry Pi cluster running Kubernetes](https://kubernetes.io/blog/2015/11/creating-a-raspberry-pi-cluster-running-kubernetes-the-shopping-list-part-1/)
+[^7]: [Kubernetes歷史](https://zh.wikipedia.org/zh-tw/Kubernetes#%E5%8E%86%E5%8F%B2)
