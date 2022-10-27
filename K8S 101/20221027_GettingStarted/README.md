@@ -83,7 +83,21 @@ Kubernetes在希臘雨中的意思是舵手, 掌握舵的人.[^7]
 K8s是我們常用的縮寫, 這個```8```表示的是K與s之間有8個字母.
 
 ## K8S Architecture
+- Nodes (Minions)
+- Custer
+- Master
+- Components[^8]
+  - API Server
+  - etcd
+  - Kubelet
+  - Container Runtime
+  - Controller
+  - Scheduler
 
+![](architecture_01.png)  
+
+## Minikube
+單機的Kubenetes, 讓我們萌新者學習使用
 
 ## References
 [^1]: [Two Pizza Team Rule](https://docs.aws.amazon.com/whitepapers/latest/introduction-devops-aws/two-pizza-teams.html)  
@@ -93,3 +107,4 @@ K8s是我們常用的縮寫, 這個```8```表示的是K與s之間有8個字母.
 [^5]: [Performing a Rolling Update](https://kubernetes.io/docs/tutorials/kubernetes-basics/update/update-intro/)
 [^6]: [Creating a Raspberry Pi cluster running Kubernetes](https://kubernetes.io/blog/2015/11/creating-a-raspberry-pi-cluster-running-kubernetes-the-shopping-list-part-1/)
 [^7]: [Kubernetes歷史](https://zh.wikipedia.org/zh-tw/Kubernetes#%E5%8E%86%E5%8F%B2)
+[^8]: [K8s Components](https://kubernetes.io/docs/concepts/overview/components/)
