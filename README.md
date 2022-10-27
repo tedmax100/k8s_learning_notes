@@ -10,3 +10,4 @@
 - [EveryThing You Need to Know About the CKA and CKAD](https://www.youtube.com/watch?v=WFGPArjYMbQ)
 - [Docker Compose And Kubernetes Fundamental](https://www.youtube.com/watch?v=kTp5xUtcalw)
 - [Kubernetes 新手入門教學](https://www.bilibili.com/video/BV1Tg411P7EB/?p=1&vd_source=a386cb3e82403ae2ccf14310c7c977f9)
+- [Kubernetes (K8S) 3 小时快速上手 + 实践，无废话纯干货](https://www.bilibili.com/video/BV1Tg411P7EB/?p=1&vd_source=a386cb3e82403ae2ccf14310c7c977f9)
