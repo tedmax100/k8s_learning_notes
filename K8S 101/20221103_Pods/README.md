@@ -60,11 +60,36 @@ spec:
 kubectl apply -f nginx.yaml
 ```
 ## Kubernetes Object
-一個yaml, 用來描述K8S的Object,需要包含有四個必備屬性[^1]
-- apiVersion - 告訴K8S, 該用哪個API version來建立該object
-- kind - 哪一個類型的object要被建立
-- metadata - 對於該object, 能給一些標籤來識別這唯一的物件
-- spec - 對該object的desire state的描述
+一個YAML檔, 用來描述K8S的Object,需要包含有四個必備屬性[^1]
+- apiVersion - string, 告訴K8S, 該用哪個API version來建立該object
+- kind - string, 哪一個類型的object要被建立, 有Pod, Service, ReplicaSet, Deployment
+- metadata - dictionary, 對於該object, 能給一些標籤來識別這唯一的物件
+- spec - dictionary, 對該object的desire state的描述
+
+pod-definition.yml
+```yaml=
+apiVersion: v1
+kind: Pod
+metadata:
+    name: myapp-pod
+    labels:
+        app: myapp
+        type: front-end
+spec:
+    containers:
+        - name: nginx-container
+          image: nginx
+```
+```bash=
+# create pod
+kubectl create -f pod-definition.yml
+
+# check pod list
+kubectl get pods
+
+# get more information for specific pod
+kubectl describe pod myapp-pod
+```
 
 ## 運行 Pod 的概念
 
