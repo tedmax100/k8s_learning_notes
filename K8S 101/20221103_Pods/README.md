@@ -90,7 +90,7 @@ kubectl apply -f nginx.yaml
 | Phase     | 描述                                                                    |
 | --------- | ----------------------------------------------------------------------- |
 | Pending   | Pod 資訊已經被 k8s 叢集接收， 但仍然有 Container 還沒資源還沒準備好執行 |
-| Running   | Pod 已經被設定到某個 node，並且所有 Pod 內的 Contaienr 都被建立。       |
+| Running   | Pod 已經被設定到某個 node，並且所有 Pod 內的 Container 都被建立。       |
 | Succeeded | 所有 Pod 的內 Container 都被執行成功。                                  |
 | Failed    | 所有 Pod 內的 Container 都被關閉，且至少有一個 Container 沒有執行成功。 |
 | Unknown   | 因為某些因素造成 Pod 狀態沒辦法被取得                                   |
