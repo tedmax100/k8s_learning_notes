@@ -1,6 +1,6 @@
 # 學習建立PODs
 
-## Pod 的概念
+## Pod 的概念[^2]
 
 ![](https://i.imgur.com/CUs7Se9.png)
 
@@ -8,7 +8,7 @@ Pod 是 k8s 中最小運行單位
 
 ## Pod 組成
 
-![](https://raw.githubusercontent.com/QueenieCplusplus/K8s_Pod/master/Pod.png)
+![](https://raw.githubusercontent.com/QueenieCplusplus/K8s_Pod/master/Pod.png)[^6]
 
 如同其字面翻譯 Pod 像是豌豆匣一樣
 
@@ -74,11 +74,11 @@ kubectl apply -f nginx.yaml
 
 以下是常見的幾種 Controller
 
-* [Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
-* [StatefulSet](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)
-* [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/)
+* [Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)[^3]
+* [StatefulSet](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)[^4]
+* [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/)[^5]
 
-## Pod LifeCycle
+## Pod LifeCycle[^7]
 
 ![](https://i.imgur.com/OZIuD8U.png)
 
