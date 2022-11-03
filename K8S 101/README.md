@@ -4,7 +4,7 @@
 
 - [20221027 - Getting Started](20221027_GettingStarted/README.md)
 - [20221103 - Introduce PODs](20221103_Pods/README.md)
-
+- [20221110 - Deployment](20221110_Deployment/README.md)
 
 ## Additional Information
 ref : Kubernetes Icons Set[^1]
