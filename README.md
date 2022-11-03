@@ -11,3 +11,5 @@
 - [Docker Compose And Kubernetes Fundamental](https://www.youtube.com/watch?v=kTp5xUtcalw)
 - [Kubernetes 新手入門教學](https://www.bilibili.com/video/BV1Tg411P7EB/?p=1&vd_source=a386cb3e82403ae2ccf14310c7c977f9)
 - [Kubernetes (K8S) 3 小时快速上手 + 实践，无废话纯干货](https://www.bilibili.com/video/BV1Tg411P7EB/?p=1&vd_source=a386cb3e82403ae2ccf14310c7c977f9)
+- [K8S Easy Doc入門](https://k8s.easydoc.net/docs/dRiQjyTY/28366845/6GiNOzyZ/9EX8Cp45)
+- [Kubernetes的架構與抉擇](https://jason-kao-blog.medium.com/kubernetes%E7%9A%84%E6%9E%B6%E6%A7%8B%E8%88%87%E6%8A%89%E6%93%87-dc762257a5e)
