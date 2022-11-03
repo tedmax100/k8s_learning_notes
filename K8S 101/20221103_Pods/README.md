@@ -22,7 +22,7 @@ Pod 內 Container 共享這個 Pod 的所有資源： network 與 storage
 
 * 命令式
 
-直接使用 kubectl 指令建制
+直接使用 kubectl 指令建制[^8]
 
 ```shell=
 kubectl run $PodName --image $ImageName
@@ -54,7 +54,7 @@ spec:
     image: nginx
 ```
 
-然後透過 kubectl 執行
+然後透過 kubectl 執行[^8]
 
 ```shell=
 kubectl apply -f nginx.yaml
@@ -91,6 +91,11 @@ kubectl get pods
 kubectl describe pod myapp-pod
 ```
 
+## 透過指令產生 kubernetes object[^8]
+
+```shell=
+kubectl run nginx --image=nginx restart=Never -o yaml --dry-run=client > nginx.yaml
+```
 ## 運行 Pod 的概念
 
 一般來說，通常不會 k8s cluster 直接管理 Pod
@@ -139,3 +144,5 @@ Pod 預設是 gracefully terminate , 會預留 30 秒處理未完成的工作以
 [^6]: [K8s Pod](https://raw.githubusercontent.com/QueenieCplusplus/K8s_Pod/master/Pod.png)
 
 [^7]: [k8s Pod lifecycle](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/)
+
+[^8]: [kubectl command cheat sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
