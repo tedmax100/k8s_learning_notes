@@ -1,6 +1,10 @@
 # 學習建立PODs
 
-## Pod 的概念[^2]
+## VScode extentions
+- [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml)
+- [Kubernetes Support](https://marketplace.visualstudio.com/items?itemName=ipedrazas.kubernetes-snippets)
+- 
+## Pod的概念[^2]
 
 ![](https://i.imgur.com/CUs7Se9.png)
 
@@ -96,6 +100,16 @@ kubectl describe pod myapp-pod
 ```shell=
 kubectl run nginx --image=nginx restart=Never -o yaml --dry-run=client > nginx.yaml
 ```
+### Exercise
+1. Create a Kubernetes Pod definition file using values below: 
+>Name: postgres  
+Labels: tier => db-tier  
+Container name: postgres  
+Image: postgres  
+
+2.  Set an environment variable for the docker container. POSTGRES_PASSWORD with a value mysecretpassword.
+To pass in an environment variable add a new property 'env' to the container object.
+
 ## 運行 Pod 的概念
 
 一般來說，通常不會 k8s cluster 直接管理 Pod
@@ -130,6 +144,18 @@ kubectl run nginx --image=nginx restart=Never -o yaml --dry-run=client > nginx.y
 **備註** 當 Pod 被關閉時，讀取到的狀態會是 Terminating ， Terminating 並不在以上 Phase 中。
 
 Pod 預設是 gracefully terminate , 會預留 30 秒處理未完成的工作以及釋放資源。
+
+## Pod Kinds
+- Deployment
+  - 適合無狀態的app, 方便app隨時被替代
+- StatefulSet
+  - 有狀態的應用, ex: db
+- DaemonSet
+  - 在每個Node上跑一個Pod, 可以做monitor, log collector...etc
+- Job & CronJob
+  - Job 表達一次性的任務
+  - CronJob會依照cron expression來按時反覆執行
+
 ## References
 [^1]: [Understanding Kubernetes Objects](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/#required-fields) 
 
