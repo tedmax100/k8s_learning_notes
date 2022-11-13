@@ -11,6 +11,7 @@
 
 * 在 k8s cluster 內所有 containers/Pods 彼此間溝通不需要透過 NAT[^2]
 * 在 k8s cluster 內所有 Nodes 與 container 彼此間溝通不需要透過 NAT[^2]
+![](service_01.png)
 
 ## k8s Service[^1]
 
