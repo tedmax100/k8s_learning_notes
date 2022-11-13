@@ -22,7 +22,7 @@ ref : Kubernetes Icons Set[^1]
 |  Controller manager  | ![](https://github.com/kubernetes/community/blob/master/icons/png/control_plane_components/labeled/c-m-128.png?raw=true)       |
 |  Cloud controller manager  | ![](https://github.com/kubernetes/community/blob/master/icons/png/control_plane_components/labeled/c-c-m-128.png?raw=true)       |
 |  API server  | ![](https://github.com/kubernetes/community/blob/master/icons/png/control_plane_components/labeled/api-128.png?raw=true)       |
-|  Scheduer  | ![](https://github.com/kubernetes/community/blob/master/icons/png/control_plane_components/labeled/sched-128.png?raw=true)       |
+|  Scheduler  | ![](https://github.com/kubernetes/community/blob/master/icons/png/control_plane_components/labeled/sched-128.png?raw=true)       |
 |  Kube-proxy  | ![](https://github.com/kubernetes/community/blob/master/icons/png/control_plane_components/labeled/k-proxy-128.png?raw=true)       |
 |  Kubelet  | ![](https://github.com/kubernetes/community/blob/master/icons/png/control_plane_components/labeled/kubelet-128.png?raw=true)       |
 
