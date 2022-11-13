@@ -36,7 +36,7 @@ spec:
 #### Concept Map
 ![](https://i.imgur.com/cADBXEx.png)
 
-#### k8s Object
+#### k8s Object [^4]
 ```yaml=
 apiVersion: v1
 kind: Service
@@ -187,3 +187,5 @@ minikube service myapp-service --url
 [^2]: https://zh.wikipedia.org/zh-tw/%E7%BD%91%E7%BB%9C%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2
 
 [^3]: https://kubernetes.io/docs/concepts/services-networking/service/#externalname
+
+[^4]: https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport
