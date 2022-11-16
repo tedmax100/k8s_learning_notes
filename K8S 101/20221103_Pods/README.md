@@ -156,6 +156,8 @@ Pod 預設是 gracefully terminate , 會預留 30 秒處理未完成的工作以
   - Job 表達一次性的任務
   - CronJob會依照cron expression來按時反覆執行
 
+## Pod異常場景 [^9]
+
 ## References
 [^1]: [Understanding Kubernetes Objects](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/#required-fields) 
 
@@ -172,3 +174,5 @@ Pod 預設是 gracefully terminate , 會預留 30 秒處理未完成的工作以
 [^7]: [k8s Pod lifecycle](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/)
 
 [^8]: [kubectl command cheat sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+
+[^9]: [解读K8s Pod的13种典型异常](https://zhuanlan.zhihu.com/p/583550457)
