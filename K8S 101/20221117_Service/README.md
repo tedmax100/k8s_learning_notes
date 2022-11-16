@@ -28,9 +28,10 @@ spec:
 ```
 
 ## k8s Service[^1]
-
 ![](https://i.imgur.com/nrNNnaq.png)
-
+Service存在的意義
+1. 防止Pod失聯(服務發現)
+2. 定義一組Pod的訪問策略(Layer4 負載均衡)
 ### NodePort
 
 #### Concept Map
@@ -55,6 +56,12 @@ spec:
 
 ![](https://i.imgur.com/5t86OxP.png)
 
+兩種常用的Service類型
+1. CllusterIP
+   1. 發派一個IP地址, 也就是VIP(虛擬IP), 只允許cluster的內部訪問
+2. NodePort
+   1. 在每個node啟用一個port, 來暴露服務, 可以在cluster外做訪問, 透過nodeIP:nodePort來訪問, port range 30000 ~ 32767
+   
 ### ClusterIP
 
 #### k8s Object
