@@ -39,8 +39,23 @@ services:
     ports:
       - 9121:9121
 
+  busybox:
+    image: busybox
+    container_name: busybox
+    volumes:
+      - 
+
+
   nginx:
     image: nginx:latest
     container_name: nginx
     ports:
       - 8888:80
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    volumes:
+      - ./config/prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - 9090:9090
