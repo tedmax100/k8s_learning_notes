@@ -39,12 +39,15 @@ services:
     ports:
       - 9121:9121
 
-  busybox:
-    image: busybox
-    container_name: busybox
+  redis-benchmark:
+    build:
+      context: .
+      dockerfile: Dockerfile
     volumes:
-      - 
-
+      - ./run.sh:/run.sh
+    command: -q -n 100
+    depends_on:
+      - redis
 
   nginx:
     image: nginx:latest
