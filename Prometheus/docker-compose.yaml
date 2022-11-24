@@ -2,20 +2,16 @@ version: '3.8'
 
 services:
   cadvisor:
-    image: google/cadvisor:latest
+    image: lagoudocker/cadvisor:v0.37.0
     container_name: cadvisor
     volumes:
-      - /:/rootfs:ro
-      - /var/run:/var/run:rw
-      - /sys:/sys:ro
-      - /dev/disk/:/dev/disk:ro
-      - /var/lib/docker/:/var/lib/docker:ro
+    - /:/rootfs:ro
+    - /var/run/docker.sock:/var/run/docker.sock:rw
+    - /sys:/sys:ro
+    - /var/lib/docker/:/var/lib/docker:ro
+    - /dev/disk/:/dev/disk:ro
     command:
-      - "--disable_metrics=udp,tcp,percpu,sched"
-      - "--storage_duration=15s"
-      - "-docker_only=true"
-      - "-housekeeping_interval=30s"
-      - "-disable_metrics=disk"
+      - privileged=true
     ports:
       - 8080:8080
     depends_on:
@@ -45,7 +41,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./run.sh:/run.sh
-    command: -q -n 100
+    command: -q -n 10000000 -c 500 -d 3 -r
     depends_on:
       - redis
 
